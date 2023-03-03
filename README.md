@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Baixando dependencias
 
-Este projeto não vem com node_modules para que fique mais leve, rode 'npm install' para funcionar.
+Este projeto não vem com node_modules para que fique mais leve, rode `npm install` para funcionar.
 
 ## Development server
 
