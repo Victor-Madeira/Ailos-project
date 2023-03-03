@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.text-center {
+    text-align: center;
+}
+
+.padding-t10 {
+    padding-top: 10px;
+}
+
+.padding-t15 {
+    padding-top: 15px;
+}
+
+.padding-t20 {
+    padding-top: 20px;
+}
+
+.padding-t25 {
+    padding-top: 25px;
+}
+
+.padding-b10 {
+    padding-bottom: 10px;
+}
+
+.padding-b20 {
+    padding-bottom: 20px;
+}
+
+.padding-b25 {
+    padding-bottom: 25px;
+}
+
+.padding-l60 {
+    padding-left: 60px;
+}

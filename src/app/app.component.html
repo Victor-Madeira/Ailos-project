@@ -1,0 +1,50 @@
+<mat-toolbar class="toolbar">
+  <mat-toolbar-row>
+    <mat-list>
+      <mat-list-item>
+        <h1 style="margin-bottom: 0px;">NOVA ADMISSÃO COOPERADO</h1>
+      </mat-list-item>
+      <mat-list-item><h5 style="color: #889499">cadastro / Admissão do Cooperado / Nova Admissão de Cooperado</h5></mat-list-item>
+    </mat-list>
+    <mat-icon style="color:#165C7D; margin-left: auto; margin-right: 0;">notifications_none</mat-icon>
+    <button mat-fab extended class="btn-viacredi">
+      VIACREDI
+    </button>
+    <img [src]=thedev alt="" class="img-size-p" style="margin-left: 10px;"/>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container style="width: 100%; position: static;">
+  <mat-sidenav [(opened)]="opened" mode="side" style="width: 90px; background-color: #165C7D;">
+    <mat-nav-list>
+      <mat-list-item class="text-center padding-t10 padding-b20">
+        <img [src]=logo alt="" class="img-size-p"/>
+      </mat-list-item>
+      <mat-list-item class="sidebar-space">
+        <a routerLink="/admissao-inicio"><mat-icon class="sidebar-burguer">menu</mat-icon></a>
+      </mat-list-item>
+      <mat-list-item class="sidebar-space">
+        <a routerLink="/admissao-inicio"><mat-icon class="sidebar-icon">search</mat-icon></a>
+      </mat-list-item>
+      <mat-list-item class="sidebar-space">
+        <a routerLink="/admissao-inicio"><mat-icon class="sidebar-icon">home</mat-icon></a>
+      </mat-list-item>
+      <mat-list-item class="sidebar-space">
+        <a routerLink="/admissao-inicio"><mat-icon class="sidebar-icon">star_border</mat-icon></a>
+      </mat-list-item>
+      <mat-list-item class="sidebar-space">
+        <a routerLink="/admissao-inicio"><mat-icon class="sidebar-icon">sms</mat-icon></a>
+      </mat-list-item>
+      <mat-list-item class="sidebar-space">
+        <a routerLink="/admissao-inicio"><mat-icon class="sidebar-icon">list_alt</mat-icon></a>
+      </mat-list-item>
+      <mat-list-item class="sidebar-space">
+        <a routerLink="/admissao-inicio"><mat-icon class="sidebar-icon">location_city</mat-icon></a>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content style="background-color: #E8EFF2;">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

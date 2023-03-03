@@ -1,0 +1,49 @@
+mat-sidenav-container{
+    height : 90%;
+}
+
+.mat-mdc-list-base {
+    --mdc-list-list-item-one-line-container-height: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.sidebar-space {
+    text-align: center; 
+    padding-top: 15px; 
+    padding-bottom: 15px;
+}
+
+.sidebar-icon {
+    height: 25px; 
+    width: 25px; 
+    color: white;
+}
+
+.sidebar-burguer {
+    height: 20px; 
+    width: 20px; 
+    color: #739DB1;
+}
+
+.btn-viacredi {
+    color:#165C7D; 
+    background-color: white; 
+    box-shadow: none; 
+    border: 1px solid #165C7D; 
+    margin-left: 10px;
+}
+
+.img-size-p {
+    height: 55px; 
+    width: 55px
+}
+
+.toolbar {
+    padding-left: 91px; 
+    padding-top: 10px; 
+    float: right; 
+    background-color: white;
+}

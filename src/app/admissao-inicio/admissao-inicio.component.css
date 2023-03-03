@@ -1,0 +1,44 @@
+.card-size {
+    height: 277px; 
+    width: 315px;
+}
+
+.btn-azul-preenchido {
+    color: white !important; 
+    background-color: #165C7D !important; 
+    margin-left: 50px;
+}
+
+.btn-azul {
+    color: #165C7D !important; 
+    background-color: white !important; 
+    margin-left: 50px;
+}
+
+.stepper {
+    width: 40%; 
+    min-width: 550px; 
+    background-color: #E8EFF2; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.card-icon {
+    position:absolute; 
+    padding-top:10px; 
+    padding-left: 10px;
+}
+
+.espaco-lista-card {
+    padding-left: 20px; 
+    padding-top: 25px; 
+    padding-bottom: 70px;
+}
+
+.toolbar-rodape {
+    padding-top: 10px; 
+    background-color: white; 
+    z-index: 1000; 
+    position: fixed; 
+    bottom: 0;
+}

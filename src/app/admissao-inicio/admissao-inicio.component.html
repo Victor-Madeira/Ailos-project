@@ -1,0 +1,104 @@
+<mat-stepper labelPosition="bottom" #stepper
+    class="stepper">
+    <mat-step>
+        <ng-template matStepLabel>Início</ng-template>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Documentos</ng-template>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Dados Cadastrais</ng-template>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Admissão</ng-template>
+    </mat-step>
+</mat-stepper>
+
+<div style="padding-left: 20px;">
+    <h2>Informe o CPF do futuro cooperado (a)</h2>
+    <label style="color: #889499;">Se necessário, você poderá duplicar uma conta existente ou pausar e retomar este
+        cadastro futuramente.</label><br />
+    <label style="color: #889499;">Digite apenas os números (sem pontos ou traços).</label>
+
+    <form class="padding-t15" id="consultaCpf">
+        <label for="cpf">CPF</label><br>
+        <input type="text" id="cpf" name="cpf" value="111.222.333-44" style="width: 250px; height: 30px;">
+        <button mat-raised-button (click)="pesquisarCpf()"
+            class="btn-azul-preenchido">Consultar por CPF</button><br>
+        <h5 id="erroCpf" name="erroCpf" style="display:none; color:red;">Informe um CPF válido</h5>
+    </form>
+</div>
+
+<div id="cardList" class="espaco-lista-card" style="display:none;">
+    <mat-grid-list rowHeight="320px" [cols]="breakpoint" (window:resize)="onResize($event)">
+        <mat-grid-tile>
+            <mat-card class="card-size">
+                <mat-card-header>
+                    <mat-card-title-group>
+                        <mat-card-title>Situação cadastral do CPF</mat-card-title>
+                        <mat-card-subtitle>Consulta na Receita Federal</mat-card-subtitle>
+                    </mat-card-title-group>
+                </mat-card-header>
+                <mat-card-content>
+                    <div class="padding-t25">
+                        <mat-icon class="card-icon">person</mat-icon>
+                        <mat-card-subtitle class="padding-l60">Nome</mat-card-subtitle>
+                        <label id="nomePessoa" class="padding-l60"></label>
+                    </div>
+                    <div class="padding-t25">
+                        <mat-icon class="card-icon" id="iconeSituacaoCpf"></mat-icon>
+                        <mat-card-subtitle class="padding-l60">Situação do CPF</mat-card-subtitle>
+                        <label id="situacaoCpf" class="padding-l60"></label>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <mat-card class="card-size">
+                <mat-card-header>
+                    <mat-card-title-group>
+                        <mat-card-title>Conta aplicação</mat-card-title>
+                        <mat-card-subtitle>Cooperativa Viacredi</mat-card-subtitle>
+                    </mat-card-title-group>
+                </mat-card-header>
+                <mat-card-content>
+                    <div class="padding-t25">
+                        <mat-icon class="card-icon">credit_card</mat-icon>
+                        <mat-card-subtitle class="padding-l60">Número da conta</mat-card-subtitle>
+                        <label id="numeroContaAp" class="padding-l60"></label>
+                    </div>
+                    <div class="padding-t25">
+                        <h3 style="color:#165C7D;">Duplicar Conta</h3>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <mat-card class="card-size">
+                <mat-card-header>
+                    <mat-card-title-group>
+                        <mat-card-title>Conta corrente</mat-card-title>
+                        <mat-card-subtitle>Cooperativa Viacredi</mat-card-subtitle>
+                    </mat-card-title-group>
+                </mat-card-header>
+                <mat-card-content>
+                    <div class="padding-t25">
+                        <mat-icon class="card-icon">credit_card</mat-icon>
+                        <mat-card-subtitle class="padding-l60">Número da conta</mat-card-subtitle>
+                        <label id="numeroContaCo" class="padding-l60"></label>
+                    </div>
+                    <div class="padding-t25">
+                        <h3 style="color:#165C7D;">Duplicar Conta</h3>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
+<mat-toolbar class="toolbar-rodape">
+    <mat-toolbar-row>
+        <button mat-raised-button id="btnNovaAdmissao"
+            class="btn-azul-preenchido" style="display:none;">Iniciar nova admissão</button>
+        <button mat-stroked-button class="btn-azul">Dicas para admissão</button>
+    </mat-toolbar-row>
+</mat-toolbar>
